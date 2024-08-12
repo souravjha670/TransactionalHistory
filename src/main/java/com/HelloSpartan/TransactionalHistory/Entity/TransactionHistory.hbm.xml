@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+    <class name="com.HelloSpartan.TransactionalHistory.Entity.TransactionHistory" table="cp_transaction_history">
+
+        <!-- Primary Key -->
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+
+        <!-- Properties -->
+        <property name="userId" column="user_id" type="integer"/>
+        <property name="tableId" column="table_id" type="integer"/>
+        <property name="amount" column="amount" type="integer"/>
+        <property name="chipType" column="chip_type" type="string"/>
+        <property name="crdr" column="cr_dr" type="string"/>
+        <property name="status" column="status" type="string"/>
+        <property name="gatewayId" column="gateway_id" type="integer"/>
+       
+        <property name="paymentMode" column="payment_mode" type="integer"/>
+        <property name="transactionId" column="transaction_id" type="integer"/>
+        <property name="remarks" column="remarks" type="string"/>
+        <property name="transactionType" column="transaction_type" type="string"/>
+        <property name="modifiedOn" column="modified_on" type="timestamp"/>
+        <property name="linuxModifiedOn" column="linux_modified_on" type="long"/>
+
+    </class>
+</hibernate-mapping>
